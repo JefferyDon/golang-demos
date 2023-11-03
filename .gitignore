@@ -16,3 +16,7 @@
 
 # JetBrain Products
 .idea
+
+# kube configs
+kubernetes/test/kube-configs/*.config
+kubernetes/test/testFile

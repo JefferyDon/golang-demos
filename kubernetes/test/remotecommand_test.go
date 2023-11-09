@@ -69,7 +69,7 @@ func TestDownloadFile(t *testing.T) {
 	testObjects := []testObject{
 		{
 			name:     "fileExistAndToFile",
-			fileName: "/home/admin/test",
+			fileName: "/host/root/test-scms-controller.pcap",
 			writer:   w,
 		},
 		{
@@ -87,7 +87,7 @@ func TestDownloadFile(t *testing.T) {
 	for _, to := range testObjects {
 		t.Run(to.name, func(t *testing.T) {
 			if err := executor.DownloadFile(remotecommand.NewFileOptions(
-				testPodName, testPodNamespace, testPodContainerName, to.fileName), to.writer); err != nil {
+				"oxherd-agent-5cqlp", "xhzy-pe", "oxherd-agent", to.fileName), to.writer); err != nil {
 				t.Fatal(err)
 			}
 		})
